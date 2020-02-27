@@ -431,7 +431,7 @@
 		"prefix": "nhsuk-review-date",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
-			"{{ image ({",
+			"{{ reviewDate ({",
 			"\tlastReview: '${1:Last review date}',",
 			"\tnextReview: '${2:Next review date}'",
 			"}) }}"
