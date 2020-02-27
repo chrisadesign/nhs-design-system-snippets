@@ -513,7 +513,7 @@
 		"body": [
 			"{{ warningCallout ({",
 			"\theading: '$1',",
-			"\tHTML: '$2'",
+			"\tHTML: '<p>$2</p>'",
 			"}) }}"
 		],
 		"description": "Warning callout - NHS Design System"
