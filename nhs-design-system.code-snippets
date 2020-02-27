@@ -70,11 +70,11 @@
 			"\t<div class=\"nhsuk-grid-column-one-third\">",
 			"\t\t<h1 class=\"nhsuk-heading-xl\">One-third column</h1>",
 			"\t</div>",
-			"</div>",
-      "",
+			"",
       "\t<div class=\"nhsuk-grid-column-two-thirds\">",
 			"\t\t<h1 class=\"nhsuk-heading-xl\">Two-thirds column</h1>",
-			"\t</div>"
+			"\t</div>",
+			"</div>",
 		],
 		"description": "One-thirds two-thirds layout - NHS Design System"
 	},
