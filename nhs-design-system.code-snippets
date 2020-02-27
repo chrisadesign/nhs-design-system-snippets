@@ -1,0 +1,584 @@
+{
+	// NHS Design System snippets for Visual Studio Code
+
+	// COMMON LAYOUTS
+
+	"Form page": {
+		"prefix": "nhsuk-prototype-form-page",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{% extends 'layout.html' %}",
+			"",
+			"{% block pageTitle %}",
+			"\t${1:Page title}",
+			"{% endblock %}",
+			"",
+			"{% block beforeContent %}",
+			"",
+			"\t{{ govukBackLink ({",
+			"\t\ttext: 'Back',",
+			"\t\thref: 'javascript:history.back()'",
+			"\t}) }}",
+			"",
+			"{% endblock %}",
+			"",
+			"{% block content %}",
+			"",
+			"<div class=\"nhsuk-grid-row\">",
+			"",
+			"\t\t<div class=\"nhsuk-grid-column-two-thirds\">",
+			"",
+			"\t\t\t<form method=\"post\">",
+			"",
+			"\t\t\t\t<h1 class=\"nhsuk-heading-l\">$1</h1>",
+			"",
+			"\t\t\t\t$2",
+			"",
+			"\t\t\t\t{{ button ({",
+			"\t\t\t\t\thtml: 'Save and continue'",
+			"\t\t\t\t}) }}",
+			"",
+			"\t\t\t</form>",
+			"",
+			"\t\t</div>",
+			"",
+			"</div>",
+			"",
+			"{% endblock %}"
+		],
+		"description": "Form page - NHS Prototype kit"
+	},
+
+	"Two-thirds layout": {
+		"prefix": "nhsuk-layout-twothirds",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"<div class=\"nhsuk-grid-row\">",
+			"\t<div class=\"nhsuk-grid-column-two-thirds\">",
+			"\t\t<h1 class=\"nhsuk-heading-xl\">Two-thirds column</h1>",
+			"\t</div>",
+			"</div>"
+		],
+		"description": "Two-thirds layout - NHS Design System"
+	},
+
+	"One-thirds / two-thirds layout": {
+		"prefix": "nhsuk-layout-onethird-twothirds",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"<div class='nhsuk-grid-row'>",
+			"\t<div class=\"nhsuk-grid-column-one-third\">",
+			"\t\t<h1 class=\"nhsuk-heading-xl\">One-third column</h1>",
+			"\t</div>",
+			"</div>",
+      "",
+      "\t<div class=\"nhsuk-grid-column-two-thirds\">",
+			"\t\t<h1 class=\"nhsuk-heading-xl\">Two-thirds column</h1>",
+			"\t</div>"
+		],
+		"description": "One-thirds two-thirds layout - NHS Design System"
+	},
+
+	"Grid row": {
+		"prefix": "nhsuk-layout-grid-row",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": ["<div class=\"nhsuk-grid-row\">", "\t$1", "</div>"],
+		"description": "Grid row - NHS Design System"
+	},
+
+	"Column": {
+		"prefix": "nhsuk-layout-column",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"<div class=\"${1|nhsuk-grid-column-full,nhsuk-grid-column-one-half,nhsuk-grid-column-one-third,nhsuk-grid-column-two-thirds,nhsuk-grid-column-one-quarter,nhsuk-grid-column-three-quarters|}\">",
+			"\t$2",
+			"</div>"
+		],
+		"description": "Column - NHS Design System"
+	},
+
+	// TYPOGRAPHY
+
+	"Link": {
+		"prefix": "nhsuk-typo-link",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": ["<a href=\"${1:destination}\">$2</a>"],
+		"description": "Link - NHS Design System"
+	},
+
+	"Header text": {
+		"prefix": "nhsuk-typo-header-text",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"<${1|h1,h2,h3,h4,h5,h6|} class=\"nhsuk-heading-${2|xl,l,m,s,xs|}\">$3</${1}>"
+		],
+		"description": "Header - NHS Design System"
+	},
+
+	"Paragraph text": {
+		"prefix": "nhsuk-typo-paragraph-text",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": ["<p class=\"${1|nhsuk-body,nhsuk-body-l,nhsuk-body-s|}\">$2</p>"],
+		"description": "Paragraph text - NHS Design System"
+	},
+
+	"List": {
+		"prefix": "nhsuk-typo-list",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"<ul class=\"${1|nhsuk-list,nhsuk-list nhsuk-list--bullet|}\">",
+			"\t<li>$2</li>",
+			"</ul>"
+		],
+		"description": "List - NHS Design System"
+	},
+
+	"Numbered list": {
+		"prefix": "nhsuk-typo-number-list",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"<ol class=\"nhsuk-list nhsuk-list--number\">",
+			"\t<li>$1</li>",
+			"</ol>"
+		],
+		"description": "Numbered list - NHS Design System"
+	},
+
+	"Section break": {
+		"prefix": "nhsuk-typo-section-break",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"<hr class=\"nhsuk-section-break ${1|nhsuk-section-break--xl,nhsuk-section-break--l,nhsuk-section-break--m, |} nhsuk-section-break--visible\">"
+		],
+		"description": "Section break - NHS Design System"
+	},
+
+	// COMPONENTS - FORM ELEMENTS
+
+	"Buttons": {
+		"prefix": "nhsuk-form-button",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ button ({", 
+			"\thtml: '${1:Save and continue},'",
+			"\tclasses: '${2| ,nhsuk-button--secondary,nhsuk-button--reverse|}'",
+			"}) }}"
+		],
+		"description": "Form submit button - NHS Design System"
+	},
+
+	"Checkboxes": {
+		"prefix": "nhsuk-form-checkboxes",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ checkboxes ({",
+			"\tidPrefix: '$1',",
+			"\tname: '$1',",
+			"\tfieldset: {",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${2:Legend text}',",
+			"\t\t\tisPageHeading: '${3|true,false|}',",
+			"\t\t\tclasses: '${4| ,nhsuk-fieldset__legend--l|}'",
+			"\t\t}",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${5:Hint text}'",
+			"\t},",
+			"\titems: [",
+			"\t\t{", 
+			"\t\t\ttext: '$6',", 
+			"\t\t\tvalue: '$7',", 
+			"\t\t\tchecked: 'checked('$1','$7')'", 
+			"\t\t}",
+			"\t\t{", 
+			"\t\t\ttext: '$8',", 
+			"\t\t\tvalue: '$9',", 
+			"\t\t\tchecked: 'checked('$1','$9')'", 
+			"\t\t}",
+			"\t]",
+			"}) }}"
+		],
+		"description": "Checkboxes - NHS Design System"
+	},
+
+	"Date input": {
+		"prefix": "nhsuk-form-date-input",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ dateInput ({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tfieldset: {",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${2:Legend text}',",
+			"\t\t\tisPageHeading: '${3|true,false|}',",
+			"\t\t\tclasses: '${4| ,nhsuk-fieldset__legend--l|}'",
+			"\t\t}",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${5:Hint text}'",
+			"\t},",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\tname: 'day',",
+			"\t\t\tclasses: 'nhsuk-input--width-2',",
+			"\t\t\tvalue: 'data[\"$1-day\"]'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\tname: 'month',",
+			"\t\t\tclasses: 'nhsuk-input--width-2',",
+			"\t\t\tvalue: 'data[\"$1-month\"]'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\tname: 'year',",
+			"\t\t\tclasses: 'nhsuk-input--width-4',",
+			"\t\t\tvalue: 'data[\"$1-year\"]'",
+			"\t\t}",
+			"\t]",
+			"}) }}"
+		],
+		"description": "Date input - NHS Design System"
+	},
+
+	"Radios": {
+		"prefix": "nhsuk-form-radios",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ radios ({",
+			"\tidPrefix: '$1',",
+			"\tname: '$1',",
+			"\tclasses: '${2| ,nhsuk-radios--inline|}',",
+			"\tfieldset: ${",
+			"\t\tlegend: {",
+			"\t\t\ttext: '${3:Legend text}',",
+			"\t\t\tisPageHeading: '{4|true,false|}'",
+			"\t\t\tclasses: '${5| ,nhsuk-fieldset__legend--l|}',",
+			"\t\t}",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${6:Hint text}'",
+			"\t},",
+			"\titems: [",
+			"\t\t{", 
+			"\t\t\ttext: '$7',", 
+			"\t\t\tvalue: '$8',", 
+			"\t\t\tchecked: 'checked('$1','$8')'", 
+			"\t\t}",
+			"\t\t{", 
+			"\t\t\ttext: '$9',", 
+			"\t\t\tvalue: '$10',", 
+			"\t\t\tchecked: 'checked('$1','$10')'", 
+			"\t\t}",
+			"\t]",
+			"}) }}"
+		],
+		"description": "Radios - NHS Design System"
+	},
+
+	"Select": {
+		"prefix": "nhsuk-form-select-dropdown",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ select ({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tlabel: {",
+			"\t\ttext: '${2:Label}',",
+			"\t\tclasses: '${3| ,nhsuk-label--l|}',",
+			"\t\tisPageHeading: '${4|true,false|}'",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${5:Hint text}'",
+			"\t}",
+			"}) }}"
+		],
+		"description": "Select - NHS Design System"
+	},
+
+	"Text input": {
+		"prefix": "nhsuk-form-text-input",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ input ({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tvalue: data['$1'] if data['$1'] else '',",
+			"\tclasses: '${2| ,nhsuk-input--width-20,nhsuk-input--width-10,nhsuk-input--width-5,nhsuk-input--width-4,nhsuk-input--width-3,nhsuk-input--width-2,nhsuk-u-width-full,nhsuk-u-width-three-quarters,nhsuk-u-width-two-thirds,nhsuk-u-width-one-half,nhsuk-u-width-one-third,nhsuk-u-width-one-quarter|}',",
+			"\tlabel: {",
+			"\t\ttext: '${3:Label}',",
+			"\t\tclasses: '${4| ,nhsuk-label--l|}',",
+			"\t\tisPageHeading: '${5|true,false|}'",
+			"\t},",
+			"\thint: {",
+			"\t\ttext: '${6:Hint text}'",
+			"\t}",
+			"}) }}"
+		],
+		"description": "Text input - NHS Design System"
+	},
+
+	"Textarea": {
+		"prefix": "nhsuk-form-textarea",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ textarea ({",
+			"\tid: '$1',",
+			"\tname: '$1',",
+			"\tvalue: data['$1'] if data['$1'] else '',",
+			"\trows: '5',",
+			"\tlabel: {",
+			"\t\ttext: '${2:Label}'",
+			"\t}",
+			"\thint: {",
+			"\t\ttext: '${3:Hint text}'",
+			"\t}",
+			"}) }}"
+		],
+		"description": "Textarea - NHS Design System"
+	},
+
+	// COMPONENTS - CONTENT PRESENTATION
+
+	"Care cards": {
+		"prefix": "nhsuk-care-cards",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ careCard ({",
+			"\ttype: '${1|non-urgent,urgent,immediate|}',",
+			"\theading: '${2:Heading}'",
+			"\tHTML: '${3:Content}'",
+			"}) }}"
+		],
+		"description": "Care cards - NHS Design System"
+	},
+
+	"Details": {
+		"prefix": "nhsuk-details",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ details ({",
+			"\ttext: '${1:Link}',",
+			"\tHTML: '${2:Content}'",
+			"}) }}"
+		],
+		"description": "Details - NHS Design System"
+	},
+
+	"Do and Don't lists": {
+		"prefix": "nhsuk-do-dont-list",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ list ({",
+			"\ttitle: '${1|Do,Don&rsquo;t|}',",
+			"\ttype: '${2|tick,cross|}'",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\titem: '$3'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\titem: '$4'",
+			"\t\t}",
+			"\t]",
+			"}) }}",
+		],
+		"description": "Do and Don't - NHS Design System"
+	},
+
+	"Expander": {
+		"prefix": "nhsuk-expander",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ details ({",
+			"\tclasses: 'nhsuk-expander',",
+			"\ttext: '${1:Link}',",
+			"\tHTML: '${2:Content}'",
+			"}) }}"
+		],
+		"description": "Expander - NHS Design System"
+	},
+
+	"Image": {
+		"prefix": "nhsuk-image",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ image ({",
+			"\tsrc: '${1:Source URL}',",
+			"\talt: '${2:Alt text}',",
+			"\talt: '${3:Caption text}'",
+			"}) }}"
+		],
+		"description": "Image - NHS Design System"
+	},
+
+	"Inset text": {
+		"prefix": "nhsuk-inset-text",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": ["{{ insetText ({", "\tHTML: '<p>$1</p>'", "}) }}"],
+		"description": "Inset text - NHS Design System"
+	},
+
+	"Review date": {
+		"prefix": "nhsuk-review-date",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ image ({",
+			"\tlastReview: '${1:Last review date}',",
+			"\tnextReview: '${2:Next review date}'",
+			"}) }}"
+		],
+		"description": "Review date - NHS Design System"
+	},
+
+	"Summary list": {
+		"prefix": "nhsuk-summary-list",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ summaryList ({",
+			"\trows: [",
+			"\t\t{",
+			"\t\t\tkey: {",
+			"\t\t\t\ttext: '$1'",
+			"\t\t\t},",
+			"\t\t\tvalue: {",
+			"\t\t\t\ttext: '$2'",
+			"\t\t\t},",
+			"\t\t\taction: {",
+			"\t\t\t\titems: [",
+			"\t\t\t\t\t{",
+			"\t\t\t\t\t\ttext: '${3:Change}',",
+			"\t\t\t\t\t\thref: '${4:#}',",
+			"\t\t\t\t\t\tvisuallyHiddenText: '$5'",
+			"\t\t\t\t\t}",
+			"\t\t\t\t]",
+			"\t\t\t}",
+			"\t\t}",
+			"\t]",
+			"}) }}"
+		],
+		"description": "Summary list - NHS Design System"
+	},
+
+	"Table": {
+		"prefix": "nhsuk-table",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ table ({",
+			"\tpanel: '${1|true,false|}',",
+			"\tcaption: '${2:Caption text}',",
+			"\tfirstCellIsHeader: '${3|true,false|}',",
+			"\thead: [",
+			"\t\t{",
+			"\t\t\ttext: '$4',",
+			"\t\t}",
+			"\t\t{",
+			"\t\t\ttext: '$5'",
+			"\t\t}",
+			"\t],",
+			"\trows: [",
+			"\t\t{",
+			"\t\t\ttext: '$6',",
+			"\t\t}",
+			"\t\t{",
+			"\t\t\ttext: '$7'",
+			"\t\t}",
+			"\t]",
+			"}) }}"
+		],
+		"description": "Table - NHS Design System"
+	},
+
+	"Warning callout": {
+		"prefix": "nhsuk-warning-callout",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ warningCallout ({",
+			"\theading: '$1',",
+			"\tHTML: '$2'",
+			"}) }}"
+		],
+		"description": "Warning callout - NHS Design System"
+	},
+
+	// NAVIGATION COMPONENTS
+
+	"Action link": {
+		"prefix": "nhsuk-action-link",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ actionLink ({",
+			"\ttext: '${1:Text}',",
+			"\thref: '${2:Link}'",
+			"}) }}"
+		],
+		"description": "Action link - NHS Design System"
+	},
+
+	"Back link": {
+		"prefix": "nhsuk-back-link",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ backLink ({",
+			"\ttext: '${1:Back}',",
+			"\thref: '${2:javascript:history.back(),#}'",
+			"}) }}"
+		],
+		"description": "Back link - NHS Design System"
+	},
+
+	"Breadcrumbs": {
+		"prefix": "nhsuk-breadcrumbs",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ breadcrumbs ({",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\ttext: '${1:Level one}',",
+			"\t\t\thref: '${2:/level-one}'",
+			"\t\t},",
+			"\t\t{",
+      "\t\t\ttext: '${3:Level two}',",
+      "\t\t\thref: '${2:/level-one}${4:/level-two}'",
+			"\t\t}",
+      "\t],",
+      "\ttext: '${5:Level three}',",
+      "\thref: '${2:/level-one}${4:/level-two}${6:/level-three}'",
+			"}) }}"
+		],
+		"description": "Breadcrumbs - NHS Design System"
+	},
+
+	"Contents list": {
+		"prefix": "nhsuk-contents-list",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ contentsList ({",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\ttext: '${1:Text}',",
+			"\t\t\thref: '${2:Link}'",
+			"\t\t\tcurrent: 'true'",
+			"\t\t}",
+			"\t\t{",
+			"\t\t\ttext: '${3:Text}',",
+			"\t\t\thref: '${4:Link}'",
+			"\t\t}",
+			"\t],",
+			"}) }}"
+		],
+		"description": "Contents list - NHS Design System"
+	},
+
+	"Pagination": {
+		"prefix": "nhsuk-pagination",
+		// "scope": "html,nunjucks,html-nunjucks",
+		"body": [
+			"{{ pagination ({",
+			"\tpreviousUrl: '${1:Link}',",
+			"\tpreviousPage: '${2:Text}',",
+			"\tnextURL: '${3:Link}',",
+			"\tnextPage: '${4:Text}'",
+			"}) }}"
+		],
+		"description": "Pagination - NHS Design System"
+	}
+}
