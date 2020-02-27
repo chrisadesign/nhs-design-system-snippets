@@ -355,7 +355,7 @@
 		"body": [
 			"{{ careCard ({",
 			"\ttype: '${1|non-urgent,urgent,immediate|}',",
-			"\theading: '${2:Heading}'",
+			"\theading: '${2:Heading}',",
 			"\tHTML: '${3:Content}'",
 			"}) }}"
 		],
