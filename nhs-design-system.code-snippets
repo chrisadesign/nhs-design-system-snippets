@@ -338,7 +338,7 @@
 			"\trows: '5',",
 			"\tlabel: {",
 			"\t\ttext: '${2:Label}'",
-			"\t}",
+			"\t},",
 			"\thint: {",
 			"\t\ttext: '${3:Hint text}'",
 			"\t}",
