@@ -160,7 +160,7 @@
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ button ({", 
-			"\thtml: '${1:Save and continue},'",
+			"\thtml: '${1:Save and continue}',",
 			"\tclasses: '${2| ,nhsuk-button--secondary,nhsuk-button--reverse|}'",
 			"}) }}"
 		],
