@@ -595,7 +595,7 @@
 			"{{ pagination ({",
 			"\tpreviousUrl: '${1:Link}',",
 			"\tpreviousPage: '${2:Text}',",
-			"\tnextURL: '${3:Link}',",
+			"\tnextUrl: '${3:Link}',",
 			"\tnextPage: '${4:Text}'",
 			"}) }}"
 		],
