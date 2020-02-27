@@ -290,6 +290,16 @@
 			"\thint: {",
 			"\t\ttext: '${5:Hint text}'",
 			"\t}",
+			"\titems: [",
+			"\t\t{",
+			"\t\t\tvalue: '1'",
+			"\t\t\ttext: '$6'",
+			"\t\t},",
+			"\t\t{",
+			"\t\t\tvalue: '2'",
+			"\t\t\ttext: '$7'",
+			"\t\t}",
+			"\t]",
 			"}) }}"
 		],
 		"description": "Select - NHS Design System"
