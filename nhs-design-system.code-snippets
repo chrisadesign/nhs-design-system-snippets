@@ -379,8 +379,8 @@
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ list ({",
-			"\ttitle: '${1|Do,Don&rsquo;t|}',",
-			"\ttype: '${2|tick,cross|}'",
+			"\ttitle: '${1|Do,Don't|}',",
+			"\ttype: '${2|tick,cross|},'",
 			"\titems: [",
 			"\t\t{",
 			"\t\t\titem: '$3'",
