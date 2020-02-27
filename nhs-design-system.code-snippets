@@ -4,7 +4,7 @@
 	// COMMON LAYOUTS
 
 	"Form page": {
-		"prefix": "nhsuk-prototype-form-page",
+		"prefix": "nhs-prototype-form-page",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{% extends 'layout.html' %}",
@@ -50,7 +50,7 @@
 	},
 
 	"Two-thirds layout": {
-		"prefix": "nhsuk-layout-twothirds",
+		"prefix": "nhs-layout-twothirds",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"<div class=\"nhsuk-grid-row\">",
@@ -63,7 +63,7 @@
 	},
 
 	"One-thirds / two-thirds layout": {
-		"prefix": "nhsuk-layout-onethird-twothirds",
+		"prefix": "nhs-layout-onethird-twothirds",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"<div class='nhsuk-grid-row'>",
@@ -80,14 +80,14 @@
 	},
 
 	"Grid row": {
-		"prefix": "nhsuk-layout-grid-row",
+		"prefix": "nhs-layout-grid-row",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": ["<div class=\"nhsuk-grid-row\">", "\t$1", "</div>"],
 		"description": "Grid row - NHS Design System"
 	},
 
 	"Column": {
-		"prefix": "nhsuk-layout-column",
+		"prefix": "nhs-layout-column",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"<div class=\"${1|nhsuk-grid-column-full,nhsuk-grid-column-one-half,nhsuk-grid-column-one-third,nhsuk-grid-column-two-thirds,nhsuk-grid-column-one-quarter,nhsuk-grid-column-three-quarters|}\">",
@@ -100,14 +100,14 @@
 	// TYPOGRAPHY
 
 	"Link": {
-		"prefix": "nhsuk-typo-link",
+		"prefix": "nhs-typo-link",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": ["<a href=\"${1:destination}\">$2</a>"],
 		"description": "Link - NHS Design System"
 	},
 
 	"Header text": {
-		"prefix": "nhsuk-typo-header-text",
+		"prefix": "nhs-typo-header-text",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"<${1|h1,h2,h3,h4,h5,h6|} class=\"nhsuk-heading-${2|xl,l,m,s,xs|}\">$3</${1}>"
@@ -116,14 +116,14 @@
 	},
 
 	"Paragraph text": {
-		"prefix": "nhsuk-typo-paragraph-text",
+		"prefix": "nhs-typo-paragraph-text",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": ["<p class=\"${1|nhsuk-body,nhsuk-body-l,nhsuk-body-s|}\">$2</p>"],
 		"description": "Paragraph text - NHS Design System"
 	},
 
 	"List": {
-		"prefix": "nhsuk-typo-list",
+		"prefix": "nhs-typo-list",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"<ul class=\"${1|nhsuk-list,nhsuk-list nhsuk-list--bullet|}\">",
@@ -134,7 +134,7 @@
 	},
 
 	"Numbered list": {
-		"prefix": "nhsuk-typo-number-list",
+		"prefix": "nhs-typo-number-list",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"<ol class=\"nhsuk-list nhsuk-list--number\">",
@@ -145,7 +145,7 @@
 	},
 
 	"Section break": {
-		"prefix": "nhsuk-typo-section-break",
+		"prefix": "nhs-typo-section-break",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"<hr class=\"nhsuk-section-break ${1|nhsuk-section-break--xl,nhsuk-section-break--l,nhsuk-section-break--m, |} nhsuk-section-break--visible\">"
@@ -156,7 +156,7 @@
 	// COMPONENTS - FORM ELEMENTS
 
 	"Buttons": {
-		"prefix": "nhsuk-form-button",
+		"prefix": "nhs-form-button",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ button ({", 
@@ -168,7 +168,7 @@
 	},
 
 	"Checkboxes": {
-		"prefix": "nhsuk-form-checkboxes",
+		"prefix": "nhs-form-checkboxes",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ checkboxes ({",
@@ -202,7 +202,7 @@
 	},
 
 	"Date input": {
-		"prefix": "nhsuk-form-date-input",
+		"prefix": "nhs-form-date-input",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ dateInput ({",
@@ -241,7 +241,7 @@
 	},
 
 	"Radios": {
-		"prefix": "nhsuk-form-radios",
+		"prefix": "nhs-form-radios",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ radios ({",
@@ -276,7 +276,7 @@
 	},
 
 	"Select": {
-		"prefix": "nhsuk-form-select-dropdown",
+		"prefix": "nhs-form-select-dropdown",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ select ({",
@@ -306,7 +306,7 @@
 	},
 
 	"Text input": {
-		"prefix": "nhsuk-form-text-input",
+		"prefix": "nhs-form-text-input",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ input ({",
@@ -328,7 +328,7 @@
 	},
 
 	"Textarea": {
-		"prefix": "nhsuk-form-textarea",
+		"prefix": "nhs-form-textarea",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ textarea ({",
@@ -350,7 +350,7 @@
 	// COMPONENTS - CONTENT PRESENTATION
 
 	"Care cards": {
-		"prefix": "nhsuk-care-cards",
+		"prefix": "nhs-care-cards",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ careCard ({",
@@ -363,7 +363,7 @@
 	},
 
 	"Details": {
-		"prefix": "nhsuk-details",
+		"prefix": "nhs-details",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ details ({",
@@ -375,7 +375,7 @@
 	},
 
 	"Do and Don't lists": {
-		"prefix": "nhsuk-do-dont-list",
+		"prefix": "nhs-do-dont-list",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ list ({",
@@ -395,7 +395,7 @@
 	},
 
 	"Expander": {
-		"prefix": "nhsuk-expander",
+		"prefix": "nhs-expander",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ details ({",
@@ -408,7 +408,7 @@
 	},
 
 	"Image": {
-		"prefix": "nhsuk-image",
+		"prefix": "nhs-image",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ image ({",
@@ -421,14 +421,14 @@
 	},
 
 	"Inset text": {
-		"prefix": "nhsuk-inset-text",
+		"prefix": "nhs-inset-text",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": ["{{ insetText ({", "\tHTML: '<p>$1</p>'", "}) }}"],
 		"description": "Inset text - NHS Design System"
 	},
 
 	"Review date": {
-		"prefix": "nhsuk-review-date",
+		"prefix": "nhs-review-date",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ reviewDate ({",
@@ -440,7 +440,7 @@
 	},
 
 	"Summary list": {
-		"prefix": "nhsuk-summary-list",
+		"prefix": "nhs-summary-list",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ summaryList ({",
@@ -469,7 +469,7 @@
 	},
 
 	"Table": {
-		"prefix": "nhsuk-table",
+		"prefix": "nhs-table",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ table ({",
@@ -508,7 +508,7 @@
 	},
 
 	"Warning callout": {
-		"prefix": "nhsuk-warning-callout",
+		"prefix": "nhs-warning-callout",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ warningCallout ({",
@@ -522,7 +522,7 @@
 	// NAVIGATION COMPONENTS
 
 	"Action link": {
-		"prefix": "nhsuk-action-link",
+		"prefix": "nhs-action-link",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ actionLink ({",
@@ -534,7 +534,7 @@
 	},
 
 	"Back link": {
-		"prefix": "nhsuk-back-link",
+		"prefix": "nhs-back-link",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ backLink ({",
@@ -546,7 +546,7 @@
 	},
 
 	"Breadcrumb": {
-		"prefix": "nhsuk-breadcrumb",
+		"prefix": "nhs-breadcrumb",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ breadcrumb ({",
@@ -568,7 +568,7 @@
 	},
 
 	"Contents list": {
-		"prefix": "nhsuk-contents-list",
+		"prefix": "nhs-contents-list",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ contentsList ({",
@@ -589,7 +589,7 @@
 	},
 
 	"Pagination": {
-		"prefix": "nhsuk-pagination",
+		"prefix": "nhs-pagination",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
 			"{{ pagination ({",
