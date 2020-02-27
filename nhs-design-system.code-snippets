@@ -452,7 +452,7 @@
 			"\t\t\tvalue: {",
 			"\t\t\t\ttext: '$2'",
 			"\t\t\t},",
-			"\t\t\taction: {",
+			"\t\t\tactions: {",
 			"\t\t\t\titems: [",
 			"\t\t\t\t\t{",
 			"\t\t\t\t\t\ttext: '${3:Change}',",
