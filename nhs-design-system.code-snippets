@@ -575,14 +575,14 @@
 			"\titems: [",
 			"\t\t{",
 			"\t\t\ttext: '${1:Text}',",
-			"\t\t\thref: '${2:Link}'",
+			"\t\t\thref: '${2:Link}',",
 			"\t\t\tcurrent: 'true'",
-			"\t\t}",
+			"\t\t},",
 			"\t\t{",
 			"\t\t\ttext: '${3:Text}',",
 			"\t\t\thref: '${4:Link}'",
 			"\t\t}",
-			"\t],",
+			"\t]",
 			"}) }}"
 		],
 		"description": "Contents list - NHS Design System"
