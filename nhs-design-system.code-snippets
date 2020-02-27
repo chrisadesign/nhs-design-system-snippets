@@ -545,11 +545,11 @@
 		"description": "Back link - NHS Design System"
 	},
 
-	"Breadcrumbs": {
-		"prefix": "nhsuk-breadcrumbs",
+	"Breadcrumb": {
+		"prefix": "nhsuk-breadcrumb",
 		// "scope": "html,nunjucks,html-nunjucks",
 		"body": [
-			"{{ breadcrumbs ({",
+			"{{ breadcrumb ({",
 			"\titems: [",
 			"\t\t{",
 			"\t\t\ttext: '${1:Level one}',",
@@ -564,7 +564,7 @@
       "\thref: '${2:/level-one}${4:/level-two}${6:/level-three}'",
 			"}) }}"
 		],
-		"description": "Breadcrumbs - NHS Design System"
+		"description": "Breadcrumb - NHS Design System"
 	},
 
 	"Contents list": {
