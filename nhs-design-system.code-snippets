@@ -539,7 +539,7 @@
 		"body": [
 			"{{ backLink ({",
 			"\ttext: '${1:Back}',",
-			"\thref: '${2:javascript:history.back(),#}'",
+			"\thref: '${2:javascript:history.back()}'",
 			"}) }}"
 		],
 		"description": "Back link - NHS Design System"
