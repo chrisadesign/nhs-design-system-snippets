@@ -10,4 +10,4 @@ VS Code snippets for the NHS Design system components. Other editors to come, fe
 - Press [tab] to move to the next insertion point. Repeat.
 - Press [tab] to finalise and move to the end of the snippet.
 
-Thanks to David for doing the (original GOVUK version)[https://github.com/daviddotto/govuk-design-system-snippets].
+Thanks to David for doing the [original GOVUK version](https://github.com/daviddotto/govuk-design-system-snippets).
