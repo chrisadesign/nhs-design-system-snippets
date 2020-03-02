@@ -17,7 +17,7 @@
 			"",
 			"{% block content %}",
 			"",
-			"\t{{ govukBackLink ({",
+			"\t{{ backLink ({",
 			"\t\ttext: 'Back',",
 			"\t\thref: 'javascript:history.back()'",
 			"\t}) }}",
