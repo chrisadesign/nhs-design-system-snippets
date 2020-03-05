@@ -247,7 +247,7 @@
 			"\t\t\ttext: '$7',", 
 			"\t\t\tvalue: '$8',", 
 			"\t\t\tchecked: checked('$1','$8')", 
-			"\t\t}",
+			"\t\t},",
 			"\t\t{", 
 			"\t\t\ttext: '$9',", 
 			"\t\t\tvalue: '$10',", 
