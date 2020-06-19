@@ -1,0 +1,561 @@
+#
+#
+# Add these snippets toy your existing '.text.html.basic' snippets.
+#
+# You can find instructions for installing snippets here: https://atom.io/packages/snippets
+#
+
+# COMMON LAYOUTS
+
+'.text.html':
+
+  # NHS Design System snippets for Atom
+
+  # COMMON LAYOUTS
+
+  	'Form page':
+        'prefix': 'nhs-prototype-form-page'
+        'description': 'Form page - NHS Prototype kit'
+        'body': """
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+   ${1:Page title}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+	{{ backLink ({
+  	text: 'Go back',
+  	href: ''
+	}) }}
+
+	<div class="nhsuk-grid-row">
+  	<div class="nhsuk-grid-column-two-thirds">
+    	<form class="form" action="" method="post">
+
+      	<h1 class="nhsuk-heading-l">$1</h1>
+
+      	$2
+
+      	{{ button ({
+        html: 'Save and continue'
+      	}) }}
+
+    	</form>
+  	</div>
+	</div>
+
+{% endblock %}
+        """
+
+  	'Two-thirds layout':
+        'prefix': 'nhs-layout-twothirds'
+        'description': 'Two-thirds layout - NHS Design System'
+        'body': """
+<div class="nhsuk-grid-row">
+	<div class="nhsuk-grid-column-two-thirds">
+	   <h1 class="nhsuk-heading-xl">Two-thirds column</h1>
+	</div>
+</div>
+        """
+
+  	'One-thirds / two-thirds layout':
+        'prefix': 'nhs-layout-onethird-twothirds'
+        'description': 'One-thirds two-thirds layout - NHS Design System'
+        'body': """
+<div class='nhsuk-grid-row'>
+	<div class="nhsuk-grid-column-one-third">
+	   <h1 class="nhsuk-heading-xl">One-third column</h1>
+	</div>
+
+<div class="nhsuk-grid-column-two-thirds">
+	   <h1 class="nhsuk-heading-xl">Two-thirds column</h1>
+	</div>
+</div>
+        """
+
+  	'Grid row':
+        'prefix': 'nhs-layout-grid-row'
+        'description': 'Grid row - NHS Design System'
+        'body': """
+<div class="nhsuk-grid-row">$1</div>
+      """
+
+  	'Column':
+        'prefix': 'nhs-layout-column'
+        'description': 'Column - NHS Design System'
+        'body': """
+<div class="${1|nhsuk-grid-column-full,nhsuk-grid-column-one-half,nhsuk-grid-column-one-third,nhsuk-grid-column-two-thirds,nhsuk-grid-column-one-quarter,nhsuk-grid-column-three-quarters|}">
+ $2
+</div>
+        """
+
+  	# TYPOGRAPHY
+
+  	'Link':
+        'prefix': 'nhs-typo-link'
+        'description': 'Link - NHS Design System'
+        'body': """
+        <a href="${1:destination}">$2</a>
+        """
+
+  	'Header text':
+        'prefix': 'nhs-typo-header-text'
+        'description': 'Header - NHS Design System'
+        'body': """
+<${1|h1,h2,h3,h4,h5,h6|} class="nhsuk-heading-${2|xl,l,m,s,xs|}">$3</${1}>
+        """
+
+  	'Header caption':
+        'prefix': 'nhs-typo-header-caption-text'
+        'description': 'Header caption - NHS Design System'
+        'body': """
+<span class="nhsuk-caption-${1|xl,l,m,s,xs|}">
+   $2
+ <span class="nhsuk-u-visually-hidden"> - </span>
+</span>
+        """
+
+  	'Paragraph text':
+        'prefix': 'nhs-typo-paragraph-text'
+        'description': 'Paragraph text - NHS Design System'
+        'body': """
+<p class="${1|nhsuk-body-s,nhsuk-body-m,nhsuk-body-l|}">$2</p>
+        """
+
+  	'List':
+        'prefix': 'nhs-typo-list'
+        'description': 'List - NHS Design System'
+        'body': """
+<ul class="${1|nhsuk-list,nhsuk-list nhsuk-list--bullet|}">
+   <li>$2</li>
+</ul>
+        """
+
+  	'Numbered list':
+        'prefix': 'nhs-typo-number-list'
+        'description': 'Numbered list - NHS Design System'
+        'body': """
+<ol class="nhsuk-list nhsuk-list--number">
+   <li>$1</li>
+</ol>
+        """
+
+  	'Section break':
+        'prefix': 'nhs-typo-section-break'
+        'description': 'Section break - NHS Design System'
+        'body': """
+<hr class="nhsuk-section-break ${1|nhsuk-section-break--xl,nhsuk-section-break--l,nhsuk-section-break--m, |} nhsuk-section-break--visible">"
+        """
+
+  	# COMPONENTS - FORM ELEMENTS
+
+  	'Buttons':
+        'prefix': 'nhs-form-button'
+        'description': 'Form submit button - NHS Design System'
+        'body': """
+{{ button ({
+	html: '${1:Save and continue}',
+	classes: '${2| ,nhsuk-button--secondary,nhsuk-button--reverse|}'
+}) }}
+        """
+
+  	'Checkboxes':
+        'prefix': 'nhs-form-checkboxes'
+        'description': 'Checkboxes - NHS Design System'
+        'body': """
+{{ checkboxes ({
+	idPrefix: '$1',
+	name: '$1',
+	fieldset: {
+  	legend: {
+    	html: '${2:Legend text}',
+    	isPageHeading: '${3|true,false|}',
+    	classes: '${4| ,nhsuk-fieldset__legend--l|}'
+	  }
+	},
+	hint: {
+  html: '${5:Hint text}'
+	},
+	items: [
+  	{
+    	html: '$6',
+    	value: '$6',
+    	checked: checked('$1','$6')
+  	},
+  	{
+    	html: '$7',
+    	value: '$7',
+    	checked: checked('$1','$7')
+  	}
+	]
+}) }}
+        """
+
+  	'Date input':
+        'prefix': 'nhs-form-date-input'
+        'description': 'Date input - NHS Design System'
+        'body': """
+{{ dateInput ({
+	id: '$1',
+	namePrefix: '$1',
+	fieldset: {
+  	legend: {
+    	html: '${2:Legend text}',
+    	isPageHeading: '${3|true,false|}',
+    	classes: '${4| ,nhsuk-fieldset__legend--l|}'
+  	}
+	},
+	hint: {
+  html: '${5:Hint text}'
+	},
+	items: [
+  	{
+    	name: 'day',
+    	classes: 'nhsuk-input--width-2',
+    	value: data['$1-day']
+  	},
+  	{
+    	name: 'month',
+    	classes: 'nhsuk-input--width-2',
+    	value: data['$1-month']
+  	},
+  	{
+    	name: 'year',
+    	classes: 'nhsuk-input--width-4',
+    	value: data['$1-year']
+  	}
+	]
+}) }}
+        """
+
+  	'Radios':
+        'prefix': 'nhs-form-radios'
+        'description': 'Radios - NHS Design System'
+        'body': """
+{{ radios ({
+	idPrefix: '$1',
+	name: '$1',
+	fieldset: {
+  	legend: {
+    	html: '${2:Legend text}',
+    	isPageHeading: '${3|true,false|}',
+    	classes: '${4| ,nhsuk-fieldset__legend--l|}'
+  	}
+	},
+	hint: {
+  html: '${5:Hint text}'
+	},
+	items: [
+  	{
+    	html: '$6',
+    	value: '$6',
+    	checked: checked('$1','$6')
+  	},
+  	{
+    	html: '$7',
+    	value: '$7',
+    	checked: checked('$1','$7')
+  	}
+	]
+}) }}
+        """
+
+  	'Select':
+        'prefix': 'nhs-form-select-dropdown'
+        'description': 'Select - NHS Design System'
+        'body': """
+{{ select ({
+	id: '$1',
+	name: '$1',
+	label: {
+  	text: '${2:Label}',
+  	classes: '${3| ,nhsuk-label--l|}',
+  	isPageHeading: '${4|true,false|}'
+	},
+	hint: {
+  html: '${5:Hint text}'
+	}
+	items: [
+  	{
+    	value: '1'
+    	text: '$6'
+  	},
+  	{
+    	value: '2'
+    	text: '$7'
+  	}
+	]
+}) }}
+        """
+
+  	'Text input':
+        'prefix': 'nhs-form-text-input'
+        'description': 'Text input - NHS Design System'
+        'body': """
+{{ input ({
+	id: '$1',
+	name: '$1',
+	value: data['$1'],
+	classes: '${2| ,nhsuk-input--width-20,nhsuk-input--width-10,nhsuk-input--width-5,nhsuk-input--width-4,nhsuk-input--width-3,nhsuk-input--width-2,nhsuk-u-width-full,nhsuk-u-width-three-quarters,nhsuk-u-width-two-thirds,nhsuk-u-width-one-half,nhsuk-u-width-one-third,nhsuk-u-width-one-quarter|}',
+	label: {
+  	html: '${3:Label}',
+  	classes: '${4| ,nhsuk-label--l|}',
+  	isPageHeading: '${5|true,false|}'
+	},
+	hint: {
+  html: '${6:Hint text}'
+	}
+}) }}
+        """
+
+  	'Textarea':
+        'prefix': 'nhs-form-textarea'
+        'description': 'Textarea - NHS Design System'
+        'body': """
+{{ textarea ({
+	id: '$1',
+	name: '$1',
+	value: data['$1'],
+	rows: '5',
+	label: {
+  html: '${2:Label}'
+	},
+	hint: {
+  html: '${3:Hint text}'
+	}
+}) }}
+        """
+
+  	# COMPONENTS - CONTENT PRESENTATION
+
+  	'Care cards':
+        'prefix': 'nhs-care-cards'
+        'description': 'Care cards - NHS Design System'
+        'body': """
+{{ careCard ({
+	type: '${1|non-urgent,urgent,immediate|}',
+	heading: '${2:Heading}',
+	HTML: '${3:Content}'
+}) }}
+        """
+
+  	'Details':
+        'prefix': 'nhs-details'
+        'description': 'Details - NHS Design System'
+        'body': """
+{{ details ({
+text: '${1:Link}',
+HTML: '${2:Content}'
+}) }}
+        """
+
+  	'Do and Don\'t lists':
+        'prefix': 'nhs-do-dont-list'
+        'description': 'Do and Don\'t - NHS Design System'
+        'body': """
+{{ list ({
+	title: '${1|Do,Don't|}',
+	type: '${2|tick,cross|},'
+	items: [
+  	{
+    item: '$3'
+  	},
+  	{
+    item: '$4'
+  	}
+	]
+}) }}
+        """
+
+  	'Expander':
+        'prefix': 'nhs-expander'
+        'description': 'Expander - NHS Design System'
+        'body': """
+{{ details ({
+	classes: 'nhsuk-expander',
+	text: '${1:Link}',
+	HTML: '${2:Content}'
+}) }}
+        """
+
+  	'Image':
+        'prefix': 'nhs-image'
+        'description': 'Image - NHS Design System'
+        'body': """
+{{ image ({
+	src: '${1:Source URL}',
+	alt: '${2:Alt text}',
+	caption: '${3:Caption text}'
+}) }}
+        """
+
+  	'Inset text':
+        'prefix': 'nhs-inset-text'
+        'description': 'Inset text - NHS Design System'
+        'body': """
+{{ insetText ({
+  HTML: '<p>$1</p>'
+}) }}
+        """
+
+  	'Review date':
+        'prefix': 'nhs-review-date'
+        'description': 'Review date - NHS Design System'
+        'body': """
+{{ reviewDate ({
+	lastReview: '${1:Last review date}',
+	nextReview: '${2:Next review date}'
+}) }}
+        """
+
+  	'Summary list':
+        'prefix': 'nhs-summary-list'
+        'description': 'Summary list - NHS Design System'
+        'body': """
+{{ summaryList ({
+	rows: [
+  	{
+    	key: {
+        text: '$1'
+      },
+    	value: {
+        text: '$2'
+    	},
+    	actions: {
+        items: [
+          {
+            text: '${3:Change}',
+            href: '${4:#}',
+            visuallyHiddenText: '$5'
+          }
+        ]
+      }
+    }
+	]
+}) }}
+        """
+
+  	'Table':
+        'prefix': 'nhs-table'
+        'description': 'Table - NHS Design System'
+        'body': """
+{{ table ({
+	panel: ${1|true,false|},
+	caption: '${2:Caption text}',
+	firstCellIsHeader: ${3|true,false|},
+	head: [
+  	{
+    text: '$4'
+  	},
+  	{
+    text: '$5'
+  	}
+	],
+	rows: [
+  	[
+    	{
+      text: '$6'
+    	},
+    	{
+      text: '$7'
+    	}
+  	],
+  	[
+    	{
+      text: '$8'
+    	},
+    	{
+      text: '$9'
+    	}
+  	]
+	]
+}) }}
+        """
+
+  	'Warning callout':
+        'prefix': 'nhs-warning-callout'
+        'description': 'Warning callout - NHS Design System'
+        'body': """
+{{ warningCallout ({
+	heading: '$1',
+	HTML: '<p>$2</p>'
+}) }}
+        """
+
+  	# NAVIGATION COMPONENTS
+
+  	'Action link':
+        'prefix': 'nhs-action-link'
+        'description': 'Action link - NHS Design System'
+        'body': """
+{{ actionLink ({
+	text: '${1:Text}',
+	href: '${2:Link}'
+}) }}
+        """
+
+  	'Back link':
+        'prefix': 'nhs-back-link'
+        'description': 'Back link - NHS Design System'
+        'body': """
+{{ backLink ({
+	text: '${1:Go back}',
+	href: '$2'
+}) }}
+        """
+
+  	'Breadcrumb':
+        'prefix': 'nhs-breadcrumb'
+        'description': 'Breadcrumb - NHS Design System'
+        'body': """
+{{ breadcrumb ({
+	items: [
+  	{
+    	text: '${1:Level one}',
+    	href: '${2:/level-one}'
+  	},
+  	{
+    text: '${3:Level two}',
+    href: '${2:/level-one}${4:/level-two}'
+  	}
+  ],
+  text: '${5:Level three}',
+  href: '${2:/level-one}${4:/level-two}${6:/level-three}'
+}) }}
+        """
+
+  	'Contents list':
+        'prefix': 'nhs-contents-list'
+        'description': 'Contents list - NHS Design System'
+        'body': """
+{{ contentsList ({
+	items: [
+  	{
+    	text: '${1:Text}',
+    	href: '${2:Link}',
+    	current: 'true'
+  	},
+  	{
+    	text: '${3:Text}',
+    	href: '${4:Link}'
+  	}
+	]
+}) }}
+        """
+
+  	'Pagination':
+        'prefix': 'nhs-pagination'
+        'description': 'Pagination - NHS Design System'
+        'body': """
+{{ pagination ({
+	previousUrl: '${1:Link}',
+	previousPage: '${2:Text}',
+	nextUrl: '${3:Link}',
+	nextPage: '${4:Text}'
+}) }}
+        """
