@@ -1,5 +1,5 @@
-# NHS Design System Snippets 
-VS Code snippets for the NHS Design system components. Other editors to come, feel free to contribute. 
+# NHS Design System Snippets
+VS Code and Atom snippets for the NHS Design system components. 
 
 ## Usage
 - Start typing nhs-.
